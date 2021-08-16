@@ -11,27 +11,27 @@ using namespace std;
 
 void insertSort(int data[], int arraySize)
 {
-	for (int i = 1; i < arraySize; i++)
-	{
-		for (int j = i; j > 0 && data[j] < data[j - 1]; j--)
-		{
-			int tmp = data[j];
-			data[j] = data[j - 1];
-			data[j - 1] = tmp;
-		}
-	}
+    for (int i = 1; i < arraySize; i++)
+    {
+        for (int j = i; j > 0 && data[j] < data[j - 1]; j--)
+        {
+            int tmp = data[j];
+            data[j] = data[j - 1];
+            data[j - 1] = tmp;
+        }
+    }
 }
 
 int main()
 {
-	int a[ArraySize] = { 4,1,5,3,2 };
-	insertSort(a, ArraySize);
+    int a[ArraySize] = { 4,1,5,3,2 };
+    insertSort(a, ArraySize);
 
-	for (int i = 0; i < ArraySize; i++)
-	{
-		cout << a[i] << ", ";
-	}
-	cout << endl;
+    for (int i = 0; i < ArraySize; i++)
+    {
+        cout << a[i] << ", ";
+    }
+    cout << endl;
 
-	return 0;
+    return 0;
 }

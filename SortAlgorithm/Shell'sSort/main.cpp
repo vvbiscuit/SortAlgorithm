@@ -13,32 +13,32 @@ using namespace std;
 
 void shellSort(int data[], int arraySize)
 {
-	for (int gap = arraySize / 2; gap > 0; gap /= 2)
-	{
-		//从第gap个元素，逐个对其所在组进行直接插入排序操作
-		for (int i = gap; i < arraySize; i++)
-		{
-			int j = i;
-			while (j - gap >= 0 && data[j] < data[j - gap])
-			{
-				//插入排序采用交换法
-				swap(data[j], data[j - gap]);
-				j -= gap;
-			}
-		}
-	}
+    for (int gap = arraySize / 2; gap > 0; gap /= 2)
+    {
+        //从第gap个元素，逐个对其所在组进行直接插入排序操作
+        for (int i = gap; i < arraySize; i++)
+        {
+            int j = i;
+            while (j - gap >= 0 && data[j] < data[j - gap])
+            {
+                //插入排序采用交换法
+                swap(data[j], data[j - gap]);
+                j -= gap;
+            }
+        }
+    }
 }
 
 int main()
 {
-	int a[ArraySize] = { 4,1,5,3,2 };
-	shellSort(a, ArraySize);
+    int a[ArraySize] = { 4,1,5,3,2 };
+    shellSort(a, ArraySize);
 
-	for (int i = 0; i < ArraySize; i++)
-	{
-		cout << a[i] << ", ";
-	}
-	cout << endl;
+    for (int i = 0; i < ArraySize; i++)
+    {
+        cout << a[i] << ", ";
+    }
+    cout << endl;
 
-	return 0;
+    return 0;
 }

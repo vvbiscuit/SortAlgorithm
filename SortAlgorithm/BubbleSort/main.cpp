@@ -12,28 +12,28 @@ using namespace std;
 
 void bubbleSort(int array[], int arraySize)
 {
-	for (int i = 0; i < arraySize - 1; i++)
-	{
-		for (int j = 0; j < arraySize - i - 1; j++)
-		{
-			if (array[j] > array[j + 1])//升序：>, 降序：<
-			{
-				swap(array[j], array[j + 1]);
-			}
-		}
-	}
+    for (int i = 0; i < arraySize - 1; i++)
+    {
+        for (int j = 0; j < arraySize - i - 1; j++)
+        {
+            if (array[j] > array[j + 1])//升序：>, 降序：<
+            {
+                swap(array[j], array[j + 1]);
+            }
+        }
+    }
 }
 
 int main()
 {
-	int a[ArraySize] = { 4,1,5,3,2 };
-	bubbleSort(a, ArraySize);
+    int a[ArraySize] = { 4,1,5,3,2 };
+    bubbleSort(a, ArraySize);
 
-	for (int i = 0; i < ArraySize; i++)
-	{
-		cout << a[i] << ", ";
-	}
-	cout << endl;
+    for (int i = 0; i < ArraySize; i++)
+    {
+        cout << a[i] << ", ";
+    }
+    cout << endl;
 
-	return 0;
+    return 0;
 }
